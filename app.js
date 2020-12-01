@@ -2,9 +2,15 @@ const request = require('superagent')
 
 
 const getName = (obj) => {
-    const objName = obj.name
+    // const objName = obj.name
 
-    return objName
+    // const objName = { obj: {name} } 
+    // return objName
+
+    const { name } = obj
+    return name
+
+    
 }; 
 
 
