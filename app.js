@@ -1,0 +1,35 @@
+const request = require('superagent')
+
+
+const getName = (obj) => {
+    const objName = obj['name']
+
+    return objName
+}; 
+
+
+const spot = { 
+    name: 'spot', 
+    age: '5', 
+    weight: '20 lbs' }
+getName(spot)
+
+const character = { 
+    _id: '5cf5679a915ecad153ab68c9', 
+    name: 'Aang' };
+getName(character) 
+
+
+// const getName = (spot, character)['name']
+
+
+
+
+
+
+
+module.exports = {
+  getName,  
+  spot,
+  character,
+};
