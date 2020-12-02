@@ -22,14 +22,11 @@ getName(character)
 
 const copyAndPush = (arr, newNumber) => {
   
-    arr.push(newNumber);
+    arr1 = [ ...arr, newNumber ];
 
-    return arr   
+    return arr1   
 }; 
 const numbers = [1, 2, 3];
-// copyAndPush(numbers, 4)
-
-
 
 
 
