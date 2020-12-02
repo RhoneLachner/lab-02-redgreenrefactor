@@ -32,16 +32,22 @@ const numbers = [1, 2, 3];
 
 
 const allCapsNoF = (arr) => {
-    
-    arr = arr.filter(function (item) {
-        return item.indexOf('f') !== 0;
-     });
+    // arr.map(arr1 => arr1.toUpperCase())
+    arr = arr.filter(item => item.indexOf('f') !== 0);
+    // arr = arr.toUpperCase()
+  
+    arr1 = arr.map(arr1 => arr1.toUpperCase())
 
-    for (let i = 0; i < arr.length; i++) {
-        arr[i] = arr[i].toUpperCase();
-       }
 
-    return arr
+    // arr = arr.filter(function (item) {
+    //     return item.indexOf('f') !== 0;
+    //  });
+
+    // for (let i = 0; i < arr.length; i++) {
+    //     arr[i] = arr[i].toUpperCase();
+    //    }
+
+    return arr1
 }; 
 
 const nameArr = [
