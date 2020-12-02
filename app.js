@@ -2,17 +2,9 @@ const request = require('superagent')
 
 
 const getName = (obj) => {
-    // const objName = obj.name
-
-    // const objName = { obj: {name} } 
-    // return objName
-
     const { name } = obj
-    return name
-
-    
+    return name    
 }; 
-
 
 const spot = { 
     name: 'spot', 
@@ -26,16 +18,46 @@ const character = {
 getName(character) 
 
 
-// const getName = (spot, character)['name']
+
+
+const copyAndPush = (arr, newNumber) => {
+  
+    arr.push(newNumber);
+
+    return arr   
+}; 
+const numbers = [1, 2, 3];
+// copyAndPush(numbers, 4)
 
 
 
 
 
+// const nameArr = [
+//     'spot',
+//     'rover',
+//     'bingo',
+//     'fred'
+// ]
+// allCapsNoF(nameArr)
+
+//    const allCapsNoF = (nameArr) => {
+    
+//     for (let i = 0; i < nameArr.length; i++) {
+//         nameArr[i] = nameArr[i].toUpperCase();
+//        }
+
+//     return allCapsNoF    
+// }; 
 
 
 module.exports = {
-  getName,  
-  spot,
-  character,
-};
+    getName,  
+    spot,
+    character,
+    copyAndPush,
+    numbers,
+    // nameArr,
+    // allCapsNoF,
+    // arr
+  };
