@@ -30,22 +30,29 @@ const numbers = [1, 2, 3];
 
 
 
-// const nameArr = [
-//     'spot',
-//     'rover',
-//     'bingo',
-//     'fred'
-// ]
-// allCapsNoF(nameArr)
 
-//    const allCapsNoF = (nameArr) => {
+const allCapsNoF = (arr) => {
     
-//     for (let i = 0; i < nameArr.length; i++) {
-//         nameArr[i] = nameArr[i].toUpperCase();
-//        }
+    arr = arr.filter(function (item) {
+        return item.indexOf('f') !== 0;
+     });
 
-//     return allCapsNoF    
-// }; 
+    for (let i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].toUpperCase();
+       }
+
+    return arr
+}; 
+
+const nameArr = [
+    'spot',
+    'rover',
+    'bingo',
+    'fred'
+]
+
+
+
 
 
 module.exports = {
@@ -54,7 +61,7 @@ module.exports = {
     character,
     copyAndPush,
     numbers,
-    // nameArr,
-    // allCapsNoF,
+    nameArr,
+    allCapsNoF,
     // arr
   };
