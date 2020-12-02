@@ -29,23 +29,10 @@ const copyAndPush = (arr, newNumber) => {
 const numbers = [1, 2, 3];
 
 
-
-
 const allCapsNoF = (arr) => {
-    // arr.map(arr1 => arr1.toUpperCase())
-    arr = arr.filter(item => item.indexOf('f') !== 0);
-    // arr = arr.toUpperCase()
-  
+    
+    arr = arr.filter(item => item.indexOf('f') !== 0);  
     arr1 = arr.map(arr1 => arr1.toUpperCase())
-
-
-    // arr = arr.filter(function (item) {
-    //     return item.indexOf('f') !== 0;
-    //  });
-
-    // for (let i = 0; i < arr.length; i++) {
-    //     arr[i] = arr[i].toUpperCase();
-    //    }
 
     return arr1
 }; 
@@ -57,9 +44,15 @@ const nameArr = [
     'fred'
 ]
 
+const fetchQuotes = async() => {
+  const { body } = await request.get('futuramaapi.herokuapp.com/api/quotes/1');
 
-
-
+  return{
+  name: body[0].character,
+  text: body[0].quote,
+  image: body[0].image
+    };
+};
 
 module.exports = {
     getName,  
@@ -69,5 +62,5 @@ module.exports = {
     numbers,
     nameArr,
     allCapsNoF,
-    // arr
+    fetchQuotes
   };

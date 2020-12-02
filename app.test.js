@@ -4,9 +4,9 @@ const {
     character,
     numbers,
     copyAndPush,
-    arr,
     nameArr,
-    allCapsNoF
+    allCapsNoF,
+    fetchQuotes
 } = require ('./app.js'); 
 
 describe('getName', () => {
@@ -48,3 +48,13 @@ describe('allCapsNoF', () => {
         .toEqual(['SPOT', 'ROVER', 'BINGO'])
     });
 })
+
+describe('return a single quote', () => {
+    it('does it', async () => {
+      expect(await fetchQuotes()).toEqual({
+        name: expect.any(String),
+        text: expect.any(String),
+        image: expect.any(String)
+      });
+    });
+  });
